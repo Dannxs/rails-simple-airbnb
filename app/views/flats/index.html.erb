@@ -4,10 +4,8 @@
   <p>All <%= @flats.count %> flats.</p>
 </div>
 
-<ul>
 <% @flats.each do |flat| %>
   <div class="card">
-    <li class="li_card">
       <p><%= flat.name  %></p>
       <p><%= flat.address %></p>
       <p><%= flat.number_of_guests %></p>
@@ -15,7 +13,5 @@
       <p><%= link_to "More info", flat_path(flat)%></p>
       <p><%= link_to "Edit", "#{flat_path(flat)}/edit" %></p>
       <p><%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %></p>
-    </li>
   </div>
 <% end %>
-</ul>

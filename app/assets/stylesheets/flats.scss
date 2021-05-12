@@ -28,7 +28,7 @@
 
 .card{
   border: solid 0.1px;
-  display: table-cell;
+  display: inline-table;
   width: 400px;
   grid-template-columns: 120px 120px 120px;
   align-items: start;
@@ -36,8 +36,4 @@
   list-style: none;
   padding: 20px;
   list-style-position: inside;
-}
-
-.li_card{
-
 }
