@@ -1,0 +1,43 @@
+// Place all the styles related to the Flats controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.navbar{
+  align-items: center;
+}
+
+.navbar a{
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.title{
+  margin-left: 250px;
+  padding: 20px;
+}
+
+#nb_flats{
+  margin-left: 250px;
+  padding: 20px;
+}
+
+.btn{
+  margin-left: 1230px;
+}
+
+.card{
+  border: solid 0.1px;
+  display: table-cell;
+  width: 400px;
+  grid-template-columns: 120px 120px 120px;
+  align-items: start;
+  justify-content: space-between;
+  list-style: none;
+  padding: 20px;
+  list-style-position: inside;
+}
+
+.li_card{
+
+}
