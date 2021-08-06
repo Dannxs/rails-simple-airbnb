@@ -12,8 +12,8 @@ class FlatsController < ApplicationController
     @flat = Flat.new
   end
   def create
-    @flat = Flat.new(params[:id])
-    if @falt.save
+    @flat = Flat.new(flat_params)
+    if @flat.save
       redirect_to flat_path(@flat)
     else
       render :new
@@ -24,7 +24,7 @@ class FlatsController < ApplicationController
   end
   def update
     @flat = Flat.find(params[:id])
-    @flat.update(params[:flat])
+    @flat.update(flat_params)
     redirect_to flat_path(@flat)
   end
   def destroy

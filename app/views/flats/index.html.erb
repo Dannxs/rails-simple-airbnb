@@ -3,15 +3,23 @@
   <h2>All our Flats</h2>
   <p>All <%= @flats.count %> flats.</p>
 </div>
-
-<% @flats.each do |flat| %>
-  <div class="card">
-      <p><%= flat.name  %></p>
-      <p><%= flat.address %></p>
-      <p><%= flat.number_of_guests %></p>
-      <p><%= flat.price_per_night %></p>
-      <p><%= link_to "More info", flat_path(flat)%></p>
-      <p><%= link_to "Edit", "#{flat_path(flat)}/edit" %></p>
-      <p><%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %></p>
+<div class="row">
+  <div class="d-flex justify-content-center">
+    <% @flats.each do |flat| %>
+      <div class="col-4">
+        <div class="">
+          <img class="card-img-top" src="https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title"><%= flat.name %></h5>
+              <p class="card-text"><%= flat.address %></p>
+              <p class="card-text"><%= flat.number_of_guests %></p>
+              <p class="card-text"><%= flat.price_per_night %></p>
+              <p class="card-text"><%= link_to "More info", flat_path(flat)%></p>
+              <p class="card-text"><%= link_to "Edit", "#{flat_path(flat)}/edit" %></p>
+              <p class="card-text"><%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure?" } %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
